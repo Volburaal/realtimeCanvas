@@ -2,15 +2,17 @@
 
 A Python package for real-time image display and manipulation using Tkinter and PIL. This template allows users to manipulate images, display changes in real-time, and save the results as images or GIFs.
 
+## Installation
+
+```bash
+pip install realtimeCanvas
+```
+
 ## Features
 
 - Real-time image changes with Tkinter.
 - Save changes as a static image or animated GIF.
 - Easy to extend and customize for different image processing tasks.
-
-```bash
-pip install realtimeCanvas
-```
 
 ### Usage Demonstration
 
