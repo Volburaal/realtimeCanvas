@@ -52,8 +52,8 @@ def start_image_generation():
     #This will work too, but the window will close automatically once the function ends as the function isnt running in the window loop
     #manipulateImage (image, width, height, display)
     
-    display.saveImage("test.png") #save the final image once the cnavas closes
-    display.saveGif("test.gif") #save a gif of all current changes
+    display.saveImage("image.png") #save the final image once the cnavas closes
+    display.saveGif("animation.gif") #save a gif of all current changes
 
 if __name__ == "__main__":
     start_image_generation()
