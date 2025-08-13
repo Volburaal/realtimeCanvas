@@ -37,7 +37,7 @@ def manipulateImage(im, width, height, display): #all image manipulation logic h
 
         im.putpixel((col,row),(r,g,b))
 
-        display.update() #update to reflect changes on canvas
+        display.update() #update the canvas to reflect changes
         count += 1
 
 def start_image_generation():
@@ -45,8 +45,13 @@ def start_image_generation():
     height = 50
     image = newPNG(width,height) #Create an image or load an existing image
     display = RealtimeCanvas(image, scale=15) #initialize the canvas
-    display.update() #update the canvas
-    display.run(manipulateImage, image, width, height, display) #run the image manipulation function
+    display.update() #update the canvas to reflect changes
+    
+    display.run(manipulateImage, image, width, height, display) #run the image manipulation function in a window loop
+
+    #This will work too, but the window will close automatically once the function ends as the function isnt running in the window loop
+    #manipulateImage (image, width, height, display)
+    
     display.saveImage("test.png") #save the final image once the cnavas closes
     display.saveGif("test.gif") #save a gif of all current changes
 

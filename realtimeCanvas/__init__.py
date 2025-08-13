@@ -1,6 +1,5 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-import time
 
 class RealtimeCanvas:
     """
@@ -17,15 +16,18 @@ class RealtimeCanvas:
         frames (list): A list of image frames for creating a GIF.
     """
 
-    def __init__(self, image, scale=10, title="Realtime Image Display"):
+    def __init__(self, image, scale=-1, title="Realtime Image Display"):
         """
         Initializes the RealtimeCanvas object with the given image and scale.
 
         Args:
             image (PIL.Image): The image to be displayed on the canvas.
-            scale (int, optional): The scale factor for the image (default is 10).
+            scale (int, optional): The scale factor for the image (adjusted automatically if not provided).
             title (str, optional): The title of the Tkinter window (default is "Realtime Image Display").
         """
+        if(scale == -1):
+            size = max(image.size[0], image.size[1])
+            scale = int(905/size)
         self.image = image
         self.scale = scale
         self.root = tk.Tk()
