@@ -49,7 +49,7 @@ def start_image_generation():
     
     display.run(manipulateImage, image, width, height, display) #run the image manipulation function in a window loop
 
-    #This will work too, but the window will close automatically once the function ends as the function isnt running in the window loop
+    #This can act as an alternative, but the window will close automatically once the manipulateImage function returns
     #manipulateImage (image, width, height, display)
     
     display.saveImage("image.png") #save the final image once the cnavas closes
